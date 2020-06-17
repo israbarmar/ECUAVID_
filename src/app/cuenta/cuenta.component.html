@@ -40,6 +40,25 @@
     margin-top: 700px;
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
 }
+.button-back{
+    background-color: #5a4ef7;
+    display: flex;
+    padding: 8px 35px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 60px;
+    margin-right: 450px;
+    font-weight: 450;
+    font-family: Arial,sans-serif;
+    font-size: 17px;
+    text-shadow: 0.0em 0.0em 0.0em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-back:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
 
 
 </style>
@@ -50,7 +69,13 @@
 </div>
   <img width="60" src="assets/Logo.jpg"/>
 
+
  <div class="c-login" role="main">
+    <div class="button-back" style= color:#ffffff; href="#" [routerLink]="['/home']">
+      <div style=margin-left:-18px;>
+        Atrás
+    </div>
+    </div>
     <div style = "margin-left: 130px;">
     <img width="100" src="assets/LOGO-CUENTA.jpg"/>
 </div>
