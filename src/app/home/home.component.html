@@ -35,13 +35,20 @@
 
   div.vertical-line{
     border-left: 1px solid rgb(185, 185, 245);
-  height: 750px;
+  height: 850px;
   position: absolute;
   left: 20%;
   margin-left: -3px;
   margin-top: -130px;
     }
     
+    hr {
+      width: 65%;
+      color: rgb(185, 185, 245);
+      margin-right: 0px;
+      margin-top: 50px;
+    }
+
   .toolbar {
     position: absolute;
     top: 0;
@@ -82,7 +89,7 @@
   .card-container {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -290px;
+    margin-top: -735px;
   }
 
   .card {
@@ -219,12 +226,11 @@
       <a class="button" style= color:#e3e9f0; href="#" [routerLink]="['/cuenta']">Cuenta</a>
 </div>
 
-
+ <!-- Resources -->
 <div class="content" role="main">
-  <!-- Resources -->
   <div style= "margin-top:30px;">
   <div style="color: rgb(99, 93, 93);">
-    <div style= "margin-left: 285px;"> 
+    <div style= "margin-left: 330px;"> 
   <p>Las cifras de las personas afectadas por COVID-19 se irán actualizando a diario.</p>
   <p>De igual manera, para fines estadísticos, los datos de las categorías estarán representados</p>
   <p>por un gráfico lineal.</p>
@@ -232,8 +238,8 @@
 </div>
 
 <div class="Mensual-container">
- <div style="width: 70%;">
-  <div style="margin-left: 290px;">
+ <div style="width: 75%;">
+  <div style="margin-left: 323px;">
   <canvas baseChart 
       [datasets]="lineChartData" 
       [labels]="lineChartLabels" 
@@ -246,6 +252,26 @@
       (chartClick)="chartClicked($event)">
   </canvas>
 </div>
+
+<hr/>
+
+<div class="Diario-container">
+  <div style="width: 101%;">
+   <div style="margin-left: 330px;">
+    <div style="margin-top: 60px;">
+   <canvas baseChart 
+       [datasets]="lineChartDataD" 
+       [labels]="lineChartLabelsD" 
+       [options]="lineChartOptionsD"
+       [colors]="lineChartColorsD" 
+       [legend]="lineChartLegendD" 
+       [chartType]="lineChartTypeD" 
+       [plugins]="lineChartPluginsD"
+       (chartHover)="chartHoveredD($event)" 
+       (chartClick)="chartClickedD($event)">
+   </canvas>
+  </div> 
+ </div>
 
     <!--Lines-->
   <div class="card-container">
