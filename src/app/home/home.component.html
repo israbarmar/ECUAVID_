@@ -82,7 +82,7 @@
   .card-container {
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: -290px;
   }
 
   .card {
@@ -228,7 +228,23 @@
   <p>Las cifras de las personas afectadas por COVID-19 se irán actualizando a diario.</p>
   <p>De igual manera, para fines estadísticos, los datos de las categorías estarán representados</p>
   <p>por un gráfico lineal.</p>
-  </div>
+</div>
+</div>
+
+<div class="Mensual-container">
+ <div style="width: 70%;">
+  <div style="margin-left: 290px;">
+  <canvas baseChart 
+      [datasets]="lineChartData" 
+      [labels]="lineChartLabels" 
+      [options]="lineChartOptions"
+      [colors]="lineChartColors" 
+      [legend]="lineChartLegend" 
+      [chartType]="lineChartType" 
+      [plugins]="lineChartPlugins"
+      (chartHover)="chartHovered($event)" 
+      (chartClick)="chartClicked($event)">
+  </canvas>
 </div>
 
     <!--Lines-->
@@ -290,3 +306,5 @@
     </a>
   </div>
   </div>
+
+  
