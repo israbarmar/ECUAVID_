@@ -9,6 +9,15 @@
         -moz-osx-font-smoothing: grayscale;
       }
       
+      h2 {
+    margin-left: 10px;
+    font-family: "Arial", "serif";
+    font-weight: bold;
+    font-size: 30px;
+    margin-top:160px;
+    color: black;
+  }
+
         .toolbar {
         position: absolute;
         top: 0;
@@ -29,37 +38,6 @@
         margin: 0 16px;
       }
     
-    .c-login{
-        border-radius: 14px;
-        background-color: #eaebf0;
-        height: 440px;
-        width: 390px;
-        margin: 0 5px 16px;
-        padding: 12px;
-        justify-content: center;
-        margin-top: 700px;
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-    .button-etnia{
-        background-color: #5a4ef7;
-        display: flex;
-        padding: 8px 35px;
-        border: 3px solid rgb(255, 255, 255);
-        border-radius: 60px;
-        margin-right: 450px;
-        font-weight: 450;
-        font-family: Arial,sans-serif;
-        font-size: 17px;
-        text-shadow: 0.0em 0.0em 0.0em;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-    }
-    
-    .button-back:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-      }
-    
       .T-etnia{
         background-color: #5a4ef7;
         display: flex;
@@ -71,7 +49,53 @@
         color:white;
         text-shadow: 0.0em 0.0em 0.0em;
         margin-top: 150px;
-        margin-left:-480px;
+        margin-left:-1250px;
+    }
+
+    .button{
+  background-color: #5a4ef7;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 60px;
+    margin-left: 700px;
+    font-weight: 450;
+    font-family: Arial,sans-serif;
+    font-size: 17px;
+    text-shadow: 0.0em 0.0em 0.0em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .fuente{
+    font-size:23px;
+    color:black;
+    margin-top:-13px;
+    margin-left:10px;
+    font-family: Arial, serif;
+    font-weight: bold;
+  }
+
+  div.vertical-line{
+    border-left: 1px solid rgb(166, 166, 168);
+  height: 250px;
+  position: absolute;
+  left: 20%;
+  margin-left: -3px;
+  margin-top: -130px;
+    }
+
+    hr {
+      width: 105%;
+      color: rgb(185, 185, 245);
+      margin-right: 0px;
+      margin-top: 50px;
     }
 
     </style>
@@ -81,6 +105,61 @@
       <span>E  C  U  A  V  I  D</span>
     </div>
       <img width="60" src="assets/Logo.jpg"/>
+      <a class="button" style= color:#e3e9f0; href="#" [routerLink]="['/home']">Atrás</a>
 
-      <div class=T-etnia>Etnia</div>
+      <div class=T-etnia>
+        <span>Etnia</span>
+      </div>
+    </div>
+
+    <div>
+    <h2>Mestizos</h2>
+    <div class=fuente>
+    <span>Total - Hoy</span>
+
+    <div class="TotalE-container">
+      <div style="width: 40%;">
+       <div style="margin-left: 5px;">
+        <div style="margin-top: 90px;">
+       <canvas baseChart 
+           [datasets]="lineChartDataE" 
+           [labels]="lineChartLabelsE" 
+           [options]="lineChartOptionsE"
+           [colors]="lineChartColorsE" 
+           [legend]="lineChartLegendE" 
+           [chartType]="lineChartTypeE" 
+           [plugins]="lineChartPluginsE"
+           (chartHover)="chartHoveredE($event)" 
+           (chartClick)="chartClickedE($event)">
+       </canvas>
+      </div> 
+     </div>
+
+     <hr/>
+
+     <div>
+       <div style=margin-top:-110px;>
+      <h2>Indígenas</h2>
+      <div class=fuente>
+      <span>Total - Hoy</span>
+
+      <div style=margin-top:105px;>
+     <div class="TotalET-container">
+      <canvas baseChart 
+      [datasets]="lineChartDataEM" 
+      [labels]="lineChartLabelsE" 
+      [options]="lineChartOptionsE"
+      [colors]="lineChartColorsEM" 
+      [legend]="lineChartLegendE" 
+      [chartType]="lineChartTypeE" 
+      [plugins]="lineChartPluginsE"
+      (chartHover)="chartHoveredE($event)" 
+      (chartClick)="chartClickedE($event)">
+  </canvas>
+
+    </div>
+
+    
+
+      
     
