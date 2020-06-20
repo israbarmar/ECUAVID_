@@ -113,7 +113,7 @@
         font-family: Arial, serif;
         font-weight: bold;
         position: absolute;
-        top: -34.5%;
+        top: 34.5%;
         right: 90%;
       }
 
@@ -246,7 +246,6 @@
  </canvas>
  
  <div class="ET-container">   
-  <div class=fuente-dos>Total</div>
        <canvas baseChart 
            [datasets]="lineChartDataEMT" 
            [labels]="lineChartLabelsET" 
@@ -260,6 +259,64 @@
        </canvas>
 
        <hr/>
+
+       <div style="margin-top:229px;">
+      <canvas baseChart 
+      [datasets]="lineChartDataEIT" 
+      [labels]="lineChartLabelsET" 
+      [options]="lineChartOptionsE"
+      [colors]="lineChartColorsET" 
+      [legend]="lineChartLegendE" 
+      [chartType]="lineChartTypeE" 
+      [plugins]="lineChartPluginsE"
+      (chartHover)="chartHoveredE($event)" 
+      (chartClick)="chartClickedE($event)">
+  </canvas>
+
+        <hr/>
+
+        <div style="margin-top:220px;">
+          <canvas baseChart 
+          [datasets]="lineChartDataAT" 
+          [labels]="lineChartLabelsET" 
+          [options]="lineChartOptionsE"
+          [colors]="lineChartColorsET" 
+          [legend]="lineChartLegendE" 
+          [chartType]="lineChartTypeE" 
+          [plugins]="lineChartPluginsE"
+          (chartHover)="chartHoveredE($event)" 
+          (chartClick)="chartClickedE($event)">
+      </canvas>
+
+      <hr/>
+
+      <div style="margin-top:220px;">
+        <canvas baseChart 
+        [datasets]="lineChartDataEAfT" 
+        [labels]="lineChartLabelsET" 
+        [options]="lineChartOptionsE"
+        [colors]="lineChartColorsET" 
+        [legend]="lineChartLegendE" 
+        [chartType]="lineChartTypeE" 
+        [plugins]="lineChartPluginsE"
+        (chartHover)="chartHoveredE($event)" 
+        (chartClick)="chartClickedE($event)">
+    </canvas>
+
+    <hr/>
+
+      <div style="margin-top:213px;">
+        <canvas baseChart 
+        [datasets]="lineChartDataEBT" 
+        [labels]="lineChartLabelsET" 
+        [options]="lineChartOptionsE"
+        [colors]="lineChartColorsET" 
+        [legend]="lineChartLegendE" 
+        [chartType]="lineChartTypeE" 
+        [plugins]="lineChartPluginsE"
+        (chartHover)="chartHoveredE($event)" 
+        (chartClick)="chartClickedE($event)">
+    </canvas>
 
         </div>
     

@@ -10,8 +10,8 @@ import { Color, Label } from 'ng2-charts';
 export class EtniaComponent implements OnInit {
 
     lineChartDataEM: ChartDataSets[] = [
-      { data: [100, 170, 300, 250, 180, 213, 198], label: 'Contagiados' },
-      { data: [50, 80, 93, 26, 20, 25, 15], label: 'Fallecidos' }
+      { data: [10, 67, 30, 25, 18, 21, 29], label: 'Contagiados' },
+      { data: [5, 18, 19, 6, 2, 5, 15], label: 'Fallecidos' }
     ];
 
     lineChartDataEMT: ChartDataSets[] = [
@@ -19,9 +19,19 @@ export class EtniaComponent implements OnInit {
       { data: [150, 180, 293, 360, 200, 250, 157], label: 'Fallecidos' }
     ];
 
-    lineChartDataEI: ChartDataSets[] = [
+    lineChartDataEIT: ChartDataSets[] = [
       { data: [120, 275, 400, 440, 380, 487, 200], label: 'Contagiados' },
       { data: [43, 20, 33, 160, 120, 150, 150], label: 'Fallecidos' }
+    ];
+
+    lineChartDataEI: ChartDataSets[] = [
+      { data: [30, 45, 40, 44, 38, 48, 20], label: 'Contagiados' },
+      { data: [13, 22, 13, 16, 12, 15, 15], label: 'Fallecidos' }
+    ];
+
+    lineChartDataAT: ChartDataSets[] = [
+      { data: [73, 75, 70, 84, 68, 88, 80], label: 'Contagiados' },
+      { data: [33, 52, 43, 56, 32, 55, 45], label: 'Fallecidos' }
     ];
 
     lineChartDataEA: ChartDataSets[] = [
@@ -30,13 +40,23 @@ export class EtniaComponent implements OnInit {
     ]; 
 
     lineChartDataEAf: ChartDataSets[] = [
-      { data: [45, 70, 48, 24, 28, 58, 21], label: 'Contagiados' },
+      { data: [45, 30, 48, 24, 28, 58, 21], label: 'Contagiados' },
       { data: [13, 10, 3, 6, 19, 35, 18], label: 'Fallecidos' }
     ]; 
 
+    lineChartDataEAfT: ChartDataSets[] = [
+      { data: [75, 70, 68, 64, 48, 78, 61], label: 'Contagiados' },
+      { data: [33, 40, 53, 36, 30, 55, 38], label: 'Fallecidos' }
+    ]; 
+
     lineChartDataEB: ChartDataSets[] = [
-      { data: [25, 78, 58, 14, 38, 50, 41], label: 'Contagiados' },
+      { data: [25, 38, 58, 14, 38, 30, 41], label: 'Contagiados' },
       { data: [2, 19, 32, 4, 11, 22, 20], label: 'Fallecidos' }
+    ]; 
+
+    lineChartDataEBT: ChartDataSets[] = [
+      { data: [65, 78, 88, 54, 68, 50, 61], label: 'Contagiados' },
+      { data: [32, 49, 47, 24, 31, 39, 40], label: 'Fallecidos' }
     ]; 
 
       //Labels shown on the x-axis
@@ -64,9 +84,13 @@ export class EtniaComponent implements OnInit {
 
       lineChartColorsET: Color[] = [
       { // dark grey
-        backgroundColor: 'rgba(255,69,0,0)',
+        backgroundColor: 'rgba(247, 220, 111,0.5)',
         borderColor: 'orange',
       },
+    {
+      backgroundColor: 'rgba(52, 152, 219,0.5)',
+        borderColor: '#2271b3',
+    }
     ];
       
     
