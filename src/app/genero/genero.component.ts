@@ -9,8 +9,8 @@ import { Color, Label } from 'ng2-charts';
 })
 export class GeneroComponent implements OnInit {
   lineChartDataGH: ChartDataSets[] = [
-    { data: [10, 67, 30, 25, 18, 21, 29], label: 'Contagiados' },
-    { data: [5, 18, 19, 6, 2, 5, 15], label: 'Fallecidos' }
+    { data: [210, 167, 130, 225, 218, 121, 129], label: 'Contagiados' },
+    { data: [55, 68, 49, 76, 82, 95, 95], label: 'Fallecidos' }
   ];
 
   lineChartDataGHT: ChartDataSets[] = [
@@ -19,13 +19,13 @@ export class GeneroComponent implements OnInit {
   ];
 
   lineChartDataGM: ChartDataSets[] = [
-    { data: [120, 275, 400, 440, 380, 487, 200], label: 'Contagiados' },
-    { data: [43, 20, 33, 160, 120, 150, 150], label: 'Fallecidos' }
+    { data: [220, 175, 100, 140, 201, 187, 113], label: 'Contagiados' },
+    { data: [43, 50, 83, 70, 120, 50, 70], label: 'Fallecidos' }
   ];
 
   lineChartDataGMT: ChartDataSets[] = [
-    { data: [30, 45, 40, 44, 38, 48, 20], label: 'Contagiados' },
-    { data: [13, 22, 13, 16, 12, 15, 15], label: 'Fallecidos' }
+    { data: [530, 445, 640, 544, 338, 548, 520], label: 'Contagiados' },
+    { data: [113, 122, 213, 316, 212, 215, 115], label: 'Fallecidos' }
   ];
 
     //Labels shown on the x-axis
