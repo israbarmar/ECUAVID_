@@ -1,0 +1,94 @@
+<style>
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #e3e9f0;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-weight: normal;
+    text-shadow: 0.2em 0.3em 0.4em;
+    font-size: 35px;
+  }
+  
+  .toolbar img {
+    margin: 0 16px;
+    margin-top: -14px;
+  }
+
+     a{
+      text-decoration:none;
+      }
+
+      .button{
+        background-color: #5a4ef7;
+        display: flex;
+        align-items: center;
+        padding: 8px 15px;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 60px;
+        margin-left: 700px;
+        font-weight: 450;
+        font-family: Arial,sans-serif;
+        font-size: 17px;
+        text-shadow: 0.0em 0.0em 0.0em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .button:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+      }
+</style>
+
+<div class="toolbar" role="banner">
+  <div style= "margin-left: 200px;">
+<span>E  C  U  A  V  I  D</span>
+<img width="60" src="assets/Logo.jpg"/>
+<div style="margin-top: -50px;"></div>
+<div style="margin-left: 290px;">
+<a class="button" style= color:#e3e9f0; href="#" [routerLink]="['/home']">Inicio</a>
+</div>
+</div>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+
+<div style = "margin-top: 100px;"></div>
+<div class="col-md-6 user-container">
+  <h2 style="margin: auto"> User Details</h2>
+  <button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>UserName</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden">{{user.id}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.age}}</td>
+      <td>{{user.salary}}</td>
+      <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
+        <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

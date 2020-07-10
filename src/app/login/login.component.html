@@ -1,0 +1,93 @@
+<style>
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #e3e9f0;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-weight: normal;
+  text-shadow: 0.2em 0.3em 0.4em;
+  font-size: 35px;
+}
+
+.toolbar img {
+  margin: 0 16px;
+  margin-top: -14px;
+}
+
+
+.fuente{
+        font-size:23px;
+        color:black;
+        margin-top:-13px;
+        margin-left:10px;
+        font-family: Arial, serif;
+        font-weight: bold;
+      }
+
+</style>
+
+<div class="toolbar" role="banner">
+  <div style= "margin-left: 200px;">
+<span>E  C  U  A  V  I  D</span>
+<img width="60" src="assets/Logo.jpg"/>
+</div>
+</div>
+
+<div style="margin-top:120px" class="row">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <div class="col-md-6 login-container">
+    <div style = "margin-left: 270px;">
+      <div style="margin-top: 20px;"></div>
+    <img width="100" src="assets/LOGO-CUENTA.jpg"/>
+  </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="fuente">
+        <div style = "margin-left: 265px;">
+          <div style="margin-top: 60px;">
+        <label for="username">Usuario:</label>
+      </div>
+    </div>
+          <div style="margin-top: -80px;">
+            <div style="margin-top: 100px;"></div>
+        <input type="text" class="form-control" formControlName="username" id="username" autocomplete="off">
+        </div>
+        <div class="error" *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">Username is required</div>
+      </div>
+      <div class="fuente">
+      <div class="form-group">
+        <div style = "margin-left: 253px;">
+        <div style="margin-top: 40px;"></div>
+        <label for="pwd">Password:</label>
+      </div>
+      </div>
+      <div style="margin-top: 10px;"></div>
+        <input type="password" class="form-control" formControlName="password" id="pwd" autocomplete="off">
+        <div class="error" *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">Password is required</div>
+      </div>
+    </div>
+    <div style="margin-top: 30px;">
+      <div style="margin-left: 290px;">
+      <button class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+    </div>
+  </div>
+      <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+      </div>
+    </form>
+  </div>
+</div>
+
+

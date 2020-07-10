@@ -1,0 +1,75 @@
+<style>
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #e3e9f0;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-weight: normal;
+    text-shadow: 0.2em 0.3em 0.4em;
+    font-size: 35px;
+  }
+  
+  .toolbar img {
+    margin: 0 16px;
+    margin-top: -14px;
+  }
+</style>
+
+<div class="toolbar" role="banner">
+  <div style= "margin-left: 200px;">
+<span>E  C  U  A  V  I  D</span>
+<img width="60" src="assets/Logo.jpg"/>
+</div>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+
+<div style="margin-top: 100px;"></div>
+<div style="margin-left:450px;">
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add User</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">User Name:</label>
+      <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" placeholder="password" name="password" class="form-control" id="password">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
+    </div>
+
+    <div class="form-group">
+      <label for="salary">Salary:</label>
+      <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary">
+    </div>
+
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>
+</div>
