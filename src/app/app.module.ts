@@ -18,6 +18,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {ApiService} from './service/api.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TokenInterceptor} from './core/interceptor';
+import {VistaComponent} from './vista/vista.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {TokenInterceptor} from './core/interceptor';
     ListUserComponent,
     LoginComponent,
     AddUserComponent,
-    EditUserComponent
+    EditUserComponent,
+    VistaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
 
@@ -7,7 +7,9 @@ import { Color, Label } from 'ng2-charts';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent{
+  
+
   
   lineChartData: ChartDataSets[] = [
     { data: [1700, 1500, 5100, 4700, 5500], label: 'Contagiados' },
@@ -53,7 +55,7 @@ export class HomeComponent implements OnInit {
 
     lineChartDataD: ChartDataSets[] = [
       { data: [400, 450, 500, 550, 570, 575, 600], label: 'Contagiados' },
-      { data: [300, 350, 320, 400, 455, 370, 400], label: 'Fallecidos' }
+      { data: [300, 350, 320, 400, 455, 370, 400], label: 'Fallecidos' },
     ];
       //Labels shown on the x-axis
       lineChartLabelsD: Label[] = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes','Sábado', 'Domingo'];
@@ -92,11 +94,4 @@ export class HomeComponent implements OnInit {
       chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
         console.log(event, active);
       }
-    
-  
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+    }

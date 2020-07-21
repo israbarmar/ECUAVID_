@@ -4,11 +4,11 @@ import {Router} from "@angular/router";
 import {ApiService} from "../service/api.service";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-vista',
+  templateUrl: './vista.component.html',
+  styleUrls: ['./vista.component.css']
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class VistaComponent implements OnInit, OnDestroy {
 
   bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
   htmlTag: HTMLElement = document.getElementsByTagName('html')[0];
@@ -21,18 +21,15 @@ export class LoginComponent implements OnInit, OnDestroy {
     if (this.loginForm.invalid) {
       return;
     }
-  
     const loginPayload = {
       username: this.loginForm.controls.username.value,
       password: this.loginForm.controls.password.value
     }
-    
     this.apiService.login(loginPayload).subscribe(data => {
       debugger;
-    
-      if(this.loginForm.controls.username.value === 'Admin' && data.status === 200) {
+      if(data.status === 200) {
         window.localStorage.setItem('token', data.result.token);
-        this.router.navigate(['list-user']);
+        this.router.navigate(['home']);
       }else {
         this.invalidLogin = true;
         alert(data.message);
@@ -43,8 +40,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   ngOnInit() {
 
   // add the css-style to the html and body tags
-  this.bodyTag.classList.add('login-page');
-  this.htmlTag.classList.add('login-page');
+  this.bodyTag.classList.add('vista-page');
+  this.htmlTag.classList.add('vista-page');
 
     window.localStorage.removeItem('token');
     this.loginForm = this.formBuilder.group({
@@ -56,8 +53,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     // remove the the body classes
-    this.bodyTag.classList.remove('login-page');
-    this.htmlTag.classList.remove('login-page');
+    this.bodyTag.classList.remove('vista-page');
+    this.htmlTag.classList.remove('vista-page');
   }
 
 
