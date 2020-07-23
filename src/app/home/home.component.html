@@ -174,6 +174,15 @@
     color: #125699;
   }
 
+  .fuente{
+        font-size:23px;
+        color:rgb(100, 96, 96);
+        margin-top:33px;
+        margin-left:590px;
+        font-family: Arial, serif;
+        font-weight: bold;
+      }
+
   footer {
     margin-top: 8px;
     display: flex;
@@ -224,9 +233,6 @@
 </div>
   <img width="60" src="assets/Logo.jpg"/>
       <a class="button" style= color:#e3e9f0; href="#" [routerLink]="['/login']">Administrador</a>
-      <div style="margin-left: -950px;">
-      <a class="button" style= color:#e3e9f0; href="#" [routerLink]="['/vista']">Usuario</a>
-    </div>
 </div>
 
  <!-- Resources -->
@@ -239,7 +245,11 @@
   <p>por un gráfico lineal.</p>
 </div>
 </div>
-
+<div class=fuente>
+  <div style="margin-left: 33px;">
+  <span>Total</span>
+</div>
+</div>
 <div class="Mensual-container">
  <div style="width: 75%;">
   <div style="margin-left: 323px;">
@@ -257,11 +267,13 @@
 </div>
 
 <hr/>
-
+<div class=fuente>
+  <span>Total - Hoy</span>
+</div>
 <div class="Diario-container">
   <div style="width: 101%;">
    <div style="margin-left: 330px;">
-    <div style="margin-top: 60px;">
+    <div style="margin-top: 10px;">
    <canvas baseChart 
        [datasets]="lineChartDataD" 
        [labels]="lineChartLabelsD" 
@@ -275,7 +287,7 @@
    </canvas>
   </div> 
  </div>
- <button id="addData" *ngIf="">Agregar mes</button>
+ 
     <!--Lines-->
   <div class="card-container">
     <div class="vertical-line" role="main">
@@ -335,5 +347,5 @@
     </a>
   </div>
   </div>
-
+  
   

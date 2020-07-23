@@ -32,7 +32,7 @@ import {VistaComponent} from './vista/vista.component';
     LoginComponent,
     AddUserComponent,
     EditUserComponent,
-    VistaComponent
+    VistaComponent,
   ],
   imports: [
     BrowserModule,

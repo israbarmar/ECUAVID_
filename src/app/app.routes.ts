@@ -9,7 +9,6 @@ import {AddUserComponent} from './user/add-user/add-user.component';
 import {ListUserComponent} from './user/list-user/list-user.component';
 import {EditUserComponent} from './user/edit-user/edit-user.component';
 import {VistaComponent} from './vista/vista.component';
-import {VistaEComponent} from './vista-e/vista-e.component';
 
 const username = 'Usuario';
 
@@ -24,8 +23,7 @@ const ROUTES: Routes = [
     {path: 'list-user', component: ListUserComponent},
     {path: 'edit-user', component: EditUserComponent},
     {path: 'vista', component: VistaComponent},
-    {path: 'vista-e', component: VistaEComponent},
-    {path:'**', pathMatch: 'full', redirectTo: 'home'}
+    {path:'**', pathMatch: 'full', redirectTo: 'vista'}
 ];
 
 export const APP_ROUTING = RouterModule.forRoot(ROUTES); 
